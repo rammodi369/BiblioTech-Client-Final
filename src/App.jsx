@@ -43,6 +43,7 @@ import QuestionList from './components/components/QuestionList';
 import AddStudyMaterial from './components/Librarian/AddStudyMaterial';
 import SearchMaterialsPage from './components/pages/SearchMaterialsPage';
 import BookUserHistory from './components/dashboard/BookUserHistory';
+import FeedbackList from './components/pages/FeedbackList';
 function App() {
   const user = useSelector((state) => state.user.user);
   const dispatch = useDispatch();
@@ -116,6 +117,7 @@ function App() {
                 <Route path="/admin" element={<><AdminDashboard /></>} >
                <Route index element={<AdminHomepage/>} />
                <Route path="finance" element={<AdminFinance />} />
+               <Route path="feedbackList" element={<FeedbackList />} />
                <Route path="add-books" element={<AddBooks />} />
                <Route path="requests" element={<RequestList/>}/>
                <Route path ="book-history" element={<AdminBookHisList/>}/>

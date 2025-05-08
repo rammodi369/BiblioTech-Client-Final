@@ -98,7 +98,7 @@ function AdminUserHistory() {
     const fetchUserHistory = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get(`http://localhost:5000/api/user-history/${id}`, {
+        const response = await axios.get(`https://bibliotech-server.onrender.com/api/user-history/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

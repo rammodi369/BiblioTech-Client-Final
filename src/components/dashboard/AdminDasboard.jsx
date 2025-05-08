@@ -233,7 +233,7 @@ const Dashboard = () => {
       </div>
 
       {/* Main content area */}
-       <div className="flex-1 bg-gray-500 overflow-auto min-h-[100vh] ">
+       <div className="flex-1 bg-white-500 overflow-auto min-h-[100vh] ">
         {/* <div className='p-8 pt-16 md:pt-8'>
         <h1 className="text-6xl font-serif text-center text-grey-500 mt-5">Admin Dashboard</h1> */}
         <Outlet/>

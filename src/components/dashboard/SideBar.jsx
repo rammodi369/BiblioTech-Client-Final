@@ -123,7 +123,7 @@ export default function AdminSidebar() {
       </div>
       <div className="mt-6 flex flex-1 flex-col justify-between">
         <nav className="-mx-3 space-y-6 ">
-          <label className="px-3 text-xs font-semibold uppercase text-blue-600">Home</label>
+          
           <div className="space-y-3 ">
             <label className="px-3 text-xs font-semibold uppercase text-blue-600">analytics</label>
             <a
@@ -163,6 +163,13 @@ export default function AdminSidebar() {
             >
               <Paperclip className="h-5 w-5" aria-hidden="true" />
               <span className="mx-2 text-sm font-medium">Book History</span>
+            </a>
+            <a
+              className="flex transform items-center rounded-lg px-3 py-2 text-gray-700 transition-colors duration-300 hover:bg-blue-100 hover:text-blue-800"
+              href="/admin/feedbackList"
+            >
+              <Paperclip className="h-5 w-5" aria-hidden="true" />
+              <span className="mx-2 text-sm font-medium">FeedBacks</span>
             </a>
             <a
               className="flex transform items-center rounded-lg px-3 py-2 text-gray-700 transition-colors duration-300 hover:bg-blue-100 hover:text-blue-800"

@@ -58,7 +58,7 @@ const FeedbackForm = () => {
   return (
     <div className="max-w-2xl w-[50vw] mx-auto mt-40 mb-20 p-6 bg-white shadow-md rounded-md">
       <div className="mb-10">
-        <h1 className="text-3xl font-semibold mb-4 text-center">Contact Us</h1>
+        <h1 className="text-3xl font-semibold mb-4 text-center">Submit FeedBack</h1>
       <p className="text-lg text-gray-600 mb-8 text-center">
         Have questions or need help? Reach out to us!
       </p>

@@ -66,32 +66,48 @@ const SearchMaterialsPage = () => {
     setMaterials(allMaterials)
   }
 
-  const handleDownload = async (fileUrl, title) => {
+  // const handleDownload = async (fileUrl, title) => {
+  //   try {
+  //     // Construct proper file URL
+  //     const fullUrl = fileUrl;
+  //     console.log(fileUrl);
+  //     // Fetch the file as blob
+  //     const response = await fetch(fullUrl)
+  //     const blob = await response.blob()
+      
+  //     // Create object URL and trigger download
+  //     const url = window.URL.createObjectURL(blob)
+  //     const link = document.createElement("a")
+  //     link.href = url
+  //     link.download = title // Sets the suggested filename
+  //     document.body.appendChild(link)
+  //     link.click()
+      
+  //     // Cleanup
+  //     window.URL.revokeObjectURL(url)
+  //     document.body.removeChild(link)
+  //   } catch (error) {
+  //     console.error("Download failed:", error)
+  //     alert("Failed to download file. Please try again.")
+  //   }
+  // }
+  const handleDownload = (fileUrl, title) => {
     try {
-      // Construct proper file URL
-      const fullUrl = fileUrl;
-      
-      // Fetch the file as blob
-      const response = await fetch(fullUrl)
-      const blob = await response.blob()
-      
-      // Create object URL and trigger download
-      const url = window.URL.createObjectURL(blob)
-      const link = document.createElement("a")
-      link.href = url
-      link.download = title // Sets the suggested filename
-      document.body.appendChild(link)
-      link.click()
-      
-      // Cleanup
-      window.URL.revokeObjectURL(url)
-      document.body.removeChild(link)
+      const link = document.createElement("a");
+      link.href = fileUrl;
+      link.download = title;
+      link.target = "_blank";
+      link.rel = "noopener";
+  
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     } catch (error) {
-      console.error("Download failed:", error)
-      alert("Failed to download file. Please try again.")
+      console.error("Download failed:", error);
+      alert("Failed to download file. Please try again.");
     }
-  }
-
+  };
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4 py-8">
